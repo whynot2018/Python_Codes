@@ -1,5 +1,5 @@
 #
-#   PyThon Lerning  @Faymaz
+#   PyThon Learning  @Faymaz
 #
 #
 from PIL import Image

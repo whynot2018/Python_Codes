@@ -1,5 +1,5 @@
 #
-#   PyThon Lerning  @Faymaz
+#   PyThon Learning  @Faymaz
 #       @programirez
 #
 # pip install faker
