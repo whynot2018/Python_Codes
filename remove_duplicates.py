@@ -18,14 +18,19 @@ def find_duplicate_files(directory):
     for root, _, files in os.walk(directory):
         for file_name in files:
             file_path = os.path.join(root, file_name)
-            file_hash = calculate_hash(file_path)
+            
+            # Check if the path is a file, not a directory
+            if os.path.isfile(file_path):
+                file_hash = calculate_hash(file_path)
 
-            if file_hash in hash_dict:
-                # If the hash value already exists, mark this file as a duplicate
-                duplicates.append(file_path)
+                if file_hash in hash_dict:
+                    # If the hash value already exists, mark this file as a duplicate
+                    duplicates.append(file_path)
+                else:
+                    # Store the hash value and file path
+                    hash_dict[file_hash] = file_path
             else:
-                # Store the hash value and file path
-                hash_dict[file_hash] = file_path
+                print(f"Skipping directory or invalid file: {file_path}")
 
     return duplicates
 
@@ -39,7 +44,7 @@ def delete_duplicates(duplicate_files):
             print(f"Error deleting file {file_path}: {e}")
 
 # Example usage
-directory = '/home/whynot/StudioProjects/imgs'
+directory = '/home/faymaz/StudioProjects/imgs'
 duplicates = find_duplicate_files(directory)
 
 if duplicates:
