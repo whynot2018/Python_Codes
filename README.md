@@ -34,13 +34,13 @@ This Python script helps you find and remove duplicate files in a specified dire
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/duplicate-file-finder.git
+   git clone https://github.com/faymaz/Python_Codes.git
    ```
 
 2. Navigate to the cloned repository:
 
    ```bash
-   cd duplicate-file-finder
+   cd duplicate-file-finder-and-remover
    ```
 
 3. Edit the `directory` variable in the script to point to the folder where you want to search for duplicate files. For example:
