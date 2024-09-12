@@ -84,6 +84,86 @@ You can customize the script to add more file types or change the behavior. For 
 - Add more extensions by updating the `ALLOWED_EXTENSIONS` set.
 - Modify the hash algorithm used by changing `hashlib.md5` to `hashlib.sha256` (or another algorithm).
 
+
+
+## 2-) File Type Lister
+
+This Python script searches through a specified directory (and its subdirectories) and lists all unique file types based on their extensions, such as `.zip`, `.mp3`, `.txt`, `.doc`, etc. The script is useful for identifying what types of files are present in large directories.
+
+### Features
+
+- Recursively searches a directory and its subdirectories.
+- Identifies and lists unique file types based on file extensions.
+- Ignores case sensitivity in extensions (e.g., `.TXT` and `.txt` are considered the same).
+- Outputs the list of file types in sorted order.
+
+### Requirements
+
+- Python 3.x
+- `os` (built-in Python library)
+
+### How It Works
+
+1. The script traverses the directory and all its subdirectories.
+2. It collects all file extensions and stores them in a set to ensure each type is listed only once.
+3. The result is a sorted list of file extensions found in the directory.
+
+### Usage
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/pettypavlow/file-type-lister.git
+   ```
+
+2. Navigate to the cloned repository:
+
+   ```bash
+   cd file-type-lister
+   ```
+
+3. Edit the `directory` variable in the script to point to the folder you want to search. For example:
+
+   ```python
+   directory = '/path/to/your/directory'
+   ```
+
+4. Run the script:
+
+   ```bash
+   python list_file_types.py
+   ```
+
+   The script will list all unique file types (extensions) in the specified directory and its subdirectories.
+
+## Example
+
+If you want to search for unique file types in `/home/kerim`, set the `directory` variable like this:
+
+```python
+directory = '/home/pettypavlow'
+```
+
+Then run the script. The output might look like this:
+
+```bash
+Found file types in /home/pettypavlow:
+/.doc
+/jpeg
+/jpg
+/mp3
+/pdf
+/png
+/zip
+```
+
+## Customizing the Script
+
+You can customize the script by:
+- Modifying the directory path to target specific directories.
+- Adding functionality to skip certain file types or directories if needed.
+
+
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
