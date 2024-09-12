@@ -37,6 +37,9 @@ draw_circle(-70, 0, 100, "red")      # Inner red circle to create the crescent
 # Draw the star in the middle of the crescent
 draw_star(40, 35, 80)
 
+# Add a smaller white circle in the middle of the star
+draw_circle(25, 5, 17, "white")  # Smaller white circle to ensure the star's center is white
+
 # Move turtle out of the way
 kalem.hideturtle()
 
