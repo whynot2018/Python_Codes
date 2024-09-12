@@ -4,10 +4,11 @@
 #
 # ----   .py   -----------
 # pip install
-
+import sys
 from PIL import Image, ImageDraw, ImageFont
+input_path = sys.argv[1]
 
-def add_watermark(input_image_path, output_image_path, watermark_text):
+def add_watermark(input_path, output_image_path, watermark_text):
     original = Image.open(input_image_path).convert("RGBA")
     txt = Image.new("RGBA", original.size, (255, 255, 255, 0))
     font = ImageFont.truetype("arial.ttf", 40)
