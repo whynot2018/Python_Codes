@@ -157,6 +157,88 @@ Found file types in /home/pettypavlow:
 /zip
 ```
 
+
+
+## 3-) File Searcher with Regex
+
+This Python script allows you to search for files in a directory (and its subdirectories) using regex patterns. The script is cross-platform and works on macOS, Windows, and Linux systems.
+
+### Features
+
+- **Cross-platform support**: Works on macOS, Windows, and Linux.
+- **Regex Search**: Allows searching for files using regular expressions.
+- **Recursive Search**: Searches through all files in the given directory and subdirectories.
+
+### Requirements
+
+- Python 3.x
+
+### Usage
+
+1. **Clone this repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/file-searcher.git
+   ```
+
+2. **Navigate to the directory**:
+
+   ```bash
+   cd file-searcher
+   ```
+
+3. **Run the script** with the desired directory and regex pattern:
+
+   ```bash
+   python searcher.py <start_directory> <regex_pattern>
+   ```
+
+   - `<start_directory>`: The directory where the search will begin.
+   - `<regex_pattern>`: The regex pattern used to match filenames.
+
+#### Examples
+
+- **Search for files that contain "filename" anywhere in their name**:
+
+  ```bash
+  $ python searcher.py /path/to/search ".*filename.*"
+  ```
+
+- **Search for files that start with "file"**:
+
+  ```bash
+  $ python searcher.py /path/to/search "^file.*"
+  ```
+
+- **Search for files that end with "file"**:
+
+  ```bash
+  $ python searcher.py /path/to/search ".*file$"
+  ```
+
+#### Example Output
+
+```bash
+Found 3 file(s):
+/Users/kerim/Desktop/folder/12121filename212121.sdsa
+/Users/kerim/Desktop/folder/filenamedsadas.dasd
+/Users/kerim/Desktop/other_folder/dasdsad232321filename.dasd
+```
+
+### How It Works
+
+- The script searches through all files in the specified directory and its subdirectories.
+- It uses the `os.walk()` function to traverse the directory tree.
+- Files are matched based on the regex pattern provided from the command line.
+- The script prints the full path of any files that match the regex pattern.
+
+#### Notes
+
+- **Recursive Search**: The script will search through all subdirectories starting from the given directory.
+- **Regex Flexibility**: You can use any valid regex pattern to search for files.
+- **Cross-Platform**: The script uses `os.walk()` and other platform-independent features to ensure it works on macOS, Windows, and Linux.
+
+
 ## Customizing the Script
 
 You can customize the script by:
