@@ -113,7 +113,7 @@ This Python script searches through a specified directory (and its subdirectorie
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/pettypavlow/file-type-lister.git
+   git clone https://github.com/faymaz/file-type-lister.git
    ```
 
 2. Navigate to the cloned repository:
@@ -138,16 +138,16 @@ This Python script searches through a specified directory (and its subdirectorie
 
 ## Example
 
-If you want to search for unique file types in `/home/kerim`, set the `directory` variable like this:
+If you want to search for unique file types in `/home/faymaz`, set the `directory` variable like this:
 
 ```python
-directory = '/home/pettypavlow'
+directory = '/home/faymaz'
 ```
 
 Then run the script. The output might look like this:
 
 ```bash
-Found file types in /home/pettypavlow:
+Found file types in /home/faymaz:
 /.doc
 /jpeg
 /jpg
@@ -178,7 +178,7 @@ This Python script allows you to search for files in a directory (and its subdir
 1. **Clone this repository**:
 
    ```bash
-   git clone https://github.com/yourusername/file-searcher.git
+   git clone https://github.com/faymaz/file-searcher.git
    ```
 
 2. **Navigate to the directory**:
@@ -220,9 +220,9 @@ This Python script allows you to search for files in a directory (and its subdir
 
 ```bash
 Found 3 file(s):
-/Users/kerim/Desktop/folder/12121filename212121.sdsa
-/Users/kerim/Desktop/folder/filenamedsadas.dasd
-/Users/kerim/Desktop/other_folder/dasdsad232321filename.dasd
+/Users/faymaz/Desktop/folder/12121filename212121.sdsa
+/Users/faymaz/Desktop/folder/filenamedsadas.dasd
+/Users/faymaz/Desktop/other_folder/dasdsad232321filename.dasd
 ```
 
 ### How It Works
