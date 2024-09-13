@@ -113,7 +113,7 @@ This Python script searches through a specified directory (and its subdirectorie
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/faymaz/file-type-lister.git
+   git clone https://github.com/faymaz/Python_Codes.git
    ```
 
 2. Navigate to the cloned repository:
@@ -178,7 +178,7 @@ This Python script allows you to search for files in a directory (and its subdir
 1. **Clone this repository**:
 
    ```bash
-   git clone https://github.com/faymaz/file-searcher.git
+   git clone https://github.com/faymaz/Python_Codes.git
    ```
 
 2. **Navigate to the directory**:
