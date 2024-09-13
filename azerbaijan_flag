@@ -1,0 +1,74 @@
+import turtle
+
+# Initialize turtle
+kalem = turtle.Turtle()
+w = turtle.Screen()
+w.setup(width=720, height=420)
+kalem.speed(5)
+
+# Function to draw a filled rectangle
+def draw_rectangle(x, y, width, height, color):
+    kalem.penup()
+    kalem.goto(x, y)
+    kalem.pendown()
+    kalem.color(color)
+    kalem.begin_fill()
+    
+    for _ in range(2):
+        kalem.forward(width)
+        kalem.right(90)
+        kalem.forward(height)
+        kalem.right(90)
+    
+    kalem.end_fill()
+
+# Function to draw filled circle (crescent part)
+def draw_circle(x, y, radius, color):
+    kalem.penup()
+    kalem.goto(x, y - radius)
+    kalem.pendown()
+    kalem.color(color)
+    kalem.begin_fill()
+    kalem.circle(radius)
+    kalem.end_fill()
+
+# Function to draw the eight-pointed star
+def draw_star(x, y, length):
+    kalem.penup()
+    kalem.goto(x, y)
+    kalem.pendown()
+    kalem.color("white")
+    kalem.begin_fill()
+    for _ in range(8):
+        kalem.forward(length)
+        kalem.left(135)
+    kalem.end_fill()
+
+# Draw the Azerbaijani flag
+def draw_azerbaijan_flag():
+    flag_width = 300
+    flag_height = 180
+    stripe_height = flag_height / 3
+
+    # Draw the blue stripe (top)
+    draw_rectangle(-150, 90, flag_width, stripe_height, "blue")
+    
+    # Draw the red stripe (middle)
+    draw_rectangle(-150, 90 - stripe_height, flag_width, stripe_height, "red")
+    
+    # Draw the green stripe (bottom)
+    draw_rectangle(-150, 90 - 2 * stripe_height, flag_width, stripe_height, "green")
+    
+    # Draw the white crescent (part of the middle red stripe)
+    draw_circle(-50, 0, 30, "white")   # Outer white circle for the crescent
+    draw_circle(-35, 0, 20, "red")     # Inner red circle to form the crescent shape
+    
+    # Draw the eight-pointed white star near the crescent
+    draw_star(0, 0, 15)
+
+# Call the function to draw the Azerbaijani flag
+draw_azerbaijan_flag()
+
+# Hide the turtle and wait for the window to close on click
+kalem.hideturtle()
+w.exitonclick()
