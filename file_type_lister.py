@@ -16,7 +16,7 @@ def list_file_types(directory):
     return sorted(file_types)
 
 # Example usage
-directory = '/home/pettypavlow'
+directory = '/home/emmili/'
 file_types = list_file_types(directory)
 
 print(f"Found file types in {directory}:")
